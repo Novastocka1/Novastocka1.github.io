@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+  }
+  
+  body {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  header {
+    background-color: #000;
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  
+  .carousel {
+    position: relative;
+    max-width: 400px;
+    margin: 2rem auto;
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  
+  .slides {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+    padding: 1px;
+  }
+  
+  .slide {
+    width: 100%;
+    flex-shrink: 0;
+    margin-right: 120px;
+  }
+  
+  .slide img {
+    width: 100%;
+    border-radius: 12px;
+  }
+  
+  /* Mostrar la imagen correspondiente al input seleccionado */
+  #slide1:checked ~ .slides {
+    transform: translateX(0%);
+  }
+  
+  #slide2:checked ~ .slides {
+    transform: translateX(-100%);
+  }
+  
+  #slide3:checked ~ .slides {
+    transform: translateX(-200%);
+  }
+  
+  #slide4:checked ~ .slides {
+    transform: translateX(-300%);
+  }
+  
+  /* Puntos de navegación */
+  .nav {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  input#slide1:checked ~ .nav label[for="slide1"],
+  input#slide2:checked ~ .nav label[for="slide2"],
+  input#slide3:checked ~ .nav label[for="slide3"],
+  input#slide4:checked ~ .nav label[for="slide4"] {
+    background-color: #333;
+  }
+  
+  .features {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .features h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .features ul {
+    list-style: none;
+    padding-left: 1rem;
+  }
+  
+  .features li {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+  }
+  
+  .whatsapp {
+    text-align: center;
+    margin: 2rem 0;
+  }
+  
+  .whatsapp a {
+    background-color: #25d366;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: background-color 0.3s;
+  }
+  
+  .whatsapp a:hover {
+    background-color: #1ebe5d;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    background-color: #222;
+    color: white;
+  }
+  mg-container {
+    width: 100%;
+    aspect-ratio: 16 / 10; /* Relación de aspecto consistente */
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .img-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
